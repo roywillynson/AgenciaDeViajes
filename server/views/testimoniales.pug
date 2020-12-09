@@ -1,0 +1,28 @@
+extends ./templates/template
+
+block content
+    main.container.mt-5
+        h1.text-center.mb-5 #{page}
+        include ./templates/blocks/testimoniales
+        
+        .row.testimoniales
+            .col-md-12
+                .row.justify-content-center
+
+                    if(errores)
+                        .col-md-8
+                            each error in errores 
+                                .alert.alert-danger.text-center.font-weight-bold(role="alert") #{error.mensaje}
+
+                    .col-md-8
+                        form(action="/testimoniales", method="POST")
+                            .form-group
+                                label(for="nombre") Nombre
+                                input(type="text", id="nombre", placeholder="Ingresa tu nombre", class="form-control", name="nombre", value= nombre)
+                            .form-group
+                                label(for="email") Email
+                                input(type="email", id="email", placeholder="Ingresa tu email", class="form-control",name="email",value= email)
+                            .form-group
+                                label(for="mensaje") Mensaje
+                                textarea(id="mensaje", placeholder="Tu mensaje", class="form-control", name="mensaje")= mensaje
+                            input.btn.btn-success.btn-block(type="submit")

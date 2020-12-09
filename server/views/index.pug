@@ -1,0 +1,34 @@
+extends ./templates/template
+
+block slider
+    .slider
+        h1 Rio de Janeiro
+        em Aventura
+
+block content
+    main.container.mt-5
+        h2.text-center.mb-5 Sobre nosotros
+        .row.mb-5
+            .row
+                .col-md-6
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis nisi accusamus consequatur, a temporibus ab quidem tempora soluta perspiciatis eos! Doloribus corporis velit quaerat dolores omnis unde debitis labore!Modi reiciendis dicta saepe sit laudantium in cupiditate corporis, soluta voluptas, beatae laboriosam? Nam veritatis maiores, dolorem fugiat soluta nisi hic unde incidunt ipsam voluptatem fuga similique? Corrupti, consequuntur fugiat?Unde beatae voluptas porro amet eum. Architecto tenetur nesciunt dignissimos hic debitis inventore laudantium! Omnis in, ad tempore explicabo dolore assumenda pariatur repellat obcaecati. Dolor quaerat voluptatem cumque deserunt aperiam.
+
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis nisi accusamus consequatur, a temporibus ab quidem tempora soluta perspiciatis eos! Doloribus corporis velit quaerat dolores omnis unde debitis labore!Modi reiciendis dicta saepe sit laudantium in cupiditate corporis, soluta voluptas, beatae laboriosam? Nam veritatis maiores, dolorem fugiat soluta nisi hic unde incidunt ipsam voluptatem fuga similique? Corrupti, consequuntur fugiat?Unde beatae voluptas porro amet eum. Architecto tenetur nesciunt dignissimos hic debitis inventore laudantium! Omnis in, ad tempore explicabo dolore assumenda pariatur repellat obcaecati. Dolor quaerat voluptatem cumque deserunt aperiam.
+
+                .col-md-6
+                    img(src="/img/nosotros.jpg", alt="")
+
+        include ./templates/blocks/viajes
+
+    .descuento
+        .container
+            .row
+                .col-md-6
+                    .contenido
+                        h3 5% de Descuento
+                        p.titulo Viaje a Cánada
+                        p.fecha 20 de marzo de 2022 - 28 de marzo de 2022
+                        p.precio
+    .container
+        h2.mt-5.text-center Testimoniales
+        include ./templates/blocks/testimoniales
